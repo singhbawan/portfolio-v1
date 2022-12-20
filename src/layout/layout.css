@@ -18,7 +18,7 @@
   --clr-darkerdark: #020008;
   --clr-dark: #1d1d1d;
   --clr-lightdark: #6c706f;
-  --clr-accent: #2debe1;
+  --clr-accent: #00d6d6;
 
   --fs-h1: 2.75rem;
   --fs-h2: 2.125rem;
@@ -32,7 +32,7 @@
 body {
   height: 100vh;
   background-color: var(--clr-dark);
-  color: var(--clr-light);
+  color: var(--clr-accent);
   overflow: hidden;
   z-index: -20;
 
@@ -46,8 +46,8 @@ canvas {
 
 .spotlight {
   position: absolute;
-  height: 800px;
-  width: 800px;
+  height: 600px;
+  width: 600px;
   z-index: -9;  
 }
 
@@ -57,11 +57,11 @@ canvas {
   background-image: -webkit-radial-gradient(
     center,
     circle cover,
-    #848a88 10%,
-    #6c706fa7 20%,
-    #6c706f68 30%,
-    #6c706f3d 40%,
-    #6c706f00 70%
+    rgb(0, 99, 99,0.35) 10%,
+    rgba(0, 99, 99, 0.25) 20%,
+    rgb(0, 99, 99, 0.2) 30%,
+    rgba(0, 99, 99, 0.15) 40%,
+    rgba(0, 99, 99, 0.0) 70%
   );
 
 }

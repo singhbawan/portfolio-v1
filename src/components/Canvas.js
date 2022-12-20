@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 function Canvas() {
   const [position, setPosition] = useState({ x: 100, y: 100 });
+  const [refPos, setRefPos] = useState(100);
 
   const canvasRef = useRef(null);
 
@@ -9,6 +10,7 @@ function Canvas() {
   const r = 25;
 
   function drawGrid(ctx, px, py) {
+    setRefPos((position.x+position.y));
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     let width = 2000;
 
@@ -28,7 +30,7 @@ function Canvas() {
   }
 
   function drawHexagon(ctx, x, y) {
-    ctx.fillStyle = "#6c706f";
+    ctx.fillStyle = "rgba(15, 80, 95, 0.15)";
     ctx.beginPath();
     for (let i = 0; i < 6; i++) {
       ctx.lineTo(x + r * Math.cos(a * i), y + r * Math.sin(a * i));
@@ -36,26 +38,29 @@ function Canvas() {
     ctx.closePath();
     ctx.strokeStyle = "#1d1d1d";
     ctx.stroke();
+    (Math.random()<=0.005)?ctx.fill():console.log("some");;
     // ctx.fill();
   }
 
   useEffect(() => {
-    
+    const canvas = canvasRef.current;
+    const context = canvas.getContext("2d");
     const spotlight = document.getElementById("spotlight1");
-    spotlight.style.left = (position.x-400) + "px";
-    spotlight.style.top = (position.y-400) + "px";
-    // drawGrid(context, position.y, position.x);
+    spotlight.style.left = (position.x-270) + "px";
+    spotlight.style.top = (position.y-270) + "px";
+    if(Math.abs(refPos-(position.x+position.y))>100){
+    drawGrid(context, position.y, position.x);}
   }, [position]);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    const context = canvas.getContext("2d");
+    // const canvas = canvasRef.current;
+    // const context = canvas.getContext("2d");
     const handleMouseMove = (event) => {
       setPosition({ x: (event.clientX), y: event.clientY });
     };
 
     window.addEventListener("mousemove", handleMouseMove);
-     drawGrid(context, position.y, position.x);
+    //  drawGrid(context, position.y, position.x);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
