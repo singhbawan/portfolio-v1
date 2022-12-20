@@ -10,7 +10,7 @@ function Canvas() {
 
   function drawGrid(ctx, px, py) {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    let width = ctx.canvas.width;
+    let width = 2000;
 
     for (
       let y = px - width;
@@ -67,8 +67,8 @@ function Canvas() {
     </div>
     <canvas
       ref={canvasRef}
-      width={window.innerWidth * 10}
-      height={window.innerWidth * 10}
+      width={2000}
+      height={2000}
     /></>
   );
 }

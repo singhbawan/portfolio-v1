@@ -39,6 +39,7 @@ body {
 canvas {
   position: absolute;
   z-index: -10;
+  
 }
 
 .spotlight {
@@ -59,12 +60,9 @@ canvas {
     center,
     circle cover,
     #1d1d1d00 30%,
-    /* black 50% rgba(0, 0, 0, 0) 1%, */
     #1d1d1d29 40%,
-    
     #1d1d1d87 50%,
     #1d1d1dc5 60%,
-    /* #1d1d1dcd 70%, */
     #1d1d1d 70%
   );
   /* box-shadow: inset 0px 0px 200px 75px var(--clr-dark); */
