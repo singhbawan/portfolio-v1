@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 function Canvas() {
-
-    const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: 100, y: 100 });
 
   const canvasRef = useRef(null);
 
@@ -11,15 +10,16 @@ function Canvas() {
 
   function drawGrid(ctx, px, py) {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    let width = 150;
 
     for (
-      let y = px - 100;
-      y + r * Math.sin(a) < px + 100;
+      let y = px - width;
+      y + r * Math.sin(a) < px + width;
       y += r * Math.sin(a)
     ) {
       for (
-        let x = r + (py - 100), j = 0;
-        x + r * (1 + Math.cos(a)) < py + 150;
+        let x = r + (py - width), j = 0;
+        x + r * (1 + Math.cos(a)) < py + width;
         x += r * (1 + Math.cos(a)), y += (-1) ** j++ * r * Math.sin(a)
       ) {
         drawHexagon(ctx, x, y);
@@ -41,17 +41,19 @@ function Canvas() {
   useEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
-    
-    const setFromEvent = (e) => setPosition({ x: 300, y: 200 });
-    window.addEventListener("mousemove", setFromEvent);
+    drawGrid(context, position.y, position.x);
+  }, [position]);
 
-    drawGrid(context, position.x, position.y);
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      setPosition({ x: event.clientX, y: event.clientY });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      window.removeEventListener("mousemove", setFromEvent);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
-    
-
   }, []);
 
   return (

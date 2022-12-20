@@ -36,7 +36,7 @@ body{
     height: 100vh;
     background-color: var(--clr-dark);
     color: var(--clr-light);
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 canvas{
