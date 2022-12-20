@@ -34,36 +34,34 @@ body {
   background-color: var(--clr-dark);
   color: var(--clr-light);
   overflow: hidden;
+  z-index: -20;
+
 }
 
 canvas {
   position: absolute;
-  z-index: -10;
+  z-index: -5;
   
 }
 
 .spotlight {
   position: absolute;
-  height: 380px;
-  width: 380px;
-  z-index: -9;
-  border-radius: 50%;
-  border: 0;
-  box-shadow: 0px 0px 20px 7500px var(--clr-dark);
+  height: 800px;
+  width: 800px;
+  z-index: -9;  
 }
 
 .spotlightchild {
   height: 100%;
   width: 100%;
-  border-radius: 50% solid 2px var(--clr-dark);
   background-image: -webkit-radial-gradient(
     center,
     circle cover,
-    #1d1d1d00 30%,
-    #1d1d1d29 40%,
-    #1d1d1d87 50%,
-    #1d1d1dc5 60%,
-    #1d1d1d 70%
+    #848a88 10%,
+    #6c706fa7 20%,
+    #6c706f68 30%,
+    #6c706f3d 40%,
+    #6c706f00 70%
   );
-  /* box-shadow: inset 0px 0px 200px 75px var(--clr-dark); */
+
 }

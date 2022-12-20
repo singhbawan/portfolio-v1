@@ -34,15 +34,16 @@ function Canvas() {
       ctx.lineTo(x + r * Math.cos(a * i), y + r * Math.sin(a * i));
     }
     ctx.closePath();
+    ctx.strokeStyle = "#1d1d1d";
     ctx.stroke();
-    ctx.fill();
+    // ctx.fill();
   }
 
   useEffect(() => {
     
     const spotlight = document.getElementById("spotlight1");
-    spotlight.style.left = (position.x-200) + "px";
-    spotlight.style.top = (position.y-200) + "px";
+    spotlight.style.left = (position.x-400) + "px";
+    spotlight.style.top = (position.y-400) + "px";
     // drawGrid(context, position.y, position.x);
   }, [position]);
 
