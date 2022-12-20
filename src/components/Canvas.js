@@ -10,7 +10,7 @@ function Canvas() {
 
   function drawGrid(ctx, px, py) {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    let width = 150;
+    let width = ctx.canvas.width;
 
     for (
       let y = px - width;
@@ -35,33 +35,41 @@ function Canvas() {
     }
     ctx.closePath();
     ctx.stroke();
-    // ctx.fill();
+    ctx.fill();
   }
+
+  useEffect(() => {
+    
+    const spotlight = document.getElementById("spotlight1");
+    spotlight.style.left = (position.x-200) + "px";
+    spotlight.style.top = (position.y-200) + "px";
+    // drawGrid(context, position.y, position.x);
+  }, [position]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
-    drawGrid(context, position.y, position.x);
-  }, [position]);
-
-  useEffect(() => {
     const handleMouseMove = (event) => {
-      setPosition({ x: event.clientX, y: event.clientY });
+      setPosition({ x: (event.clientX), y: event.clientY });
     };
 
     window.addEventListener("mousemove", handleMouseMove);
+     drawGrid(context, position.y, position.x);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
-  return (
+  return (<>
+    <div className="spotlight" id='spotlight1'>
+        <div  className="spotlightchild"></div>
+    </div>
     <canvas
       ref={canvasRef}
       width={window.innerWidth * 10}
       height={window.innerWidth * 10}
-    />
+    /></>
   );
 }
 
