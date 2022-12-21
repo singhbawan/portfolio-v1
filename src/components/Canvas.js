@@ -30,7 +30,7 @@ function Canvas() {
   }
 
   function drawHexagon(ctx, x, y) {
-    ctx.fillStyle = "rgba(15, 80, 95, 0.15)";
+    ctx.fillStyle = "rgba(20, 60, 99, 0.25)";
     ctx.beginPath();
     for (let i = 0; i < 6; i++) {
       ctx.lineTo(x + r * Math.cos(a * i), y + r * Math.sin(a * i));
@@ -38,8 +38,7 @@ function Canvas() {
     ctx.closePath();
     ctx.strokeStyle = "#1d1d1d";
     ctx.stroke();
-    (Math.random()<=0.005)?ctx.fill():console.log("some");;
-    // ctx.fill();
+    if(Math.random()<=0.02)ctx.fill();
   }
 
   useEffect(() => {
@@ -48,19 +47,19 @@ function Canvas() {
     const spotlight = document.getElementById("spotlight1");
     spotlight.style.left = (position.x-270) + "px";
     spotlight.style.top = (position.y-270) + "px";
-    if(Math.abs(refPos-(position.x+position.y))>100){
+    if(Math.abs(refPos-(position.x+position.y))>300){
     drawGrid(context, position.y, position.x);}
   }, [position]);
 
   useEffect(() => {
-    // const canvas = canvasRef.current;
-    // const context = canvas.getContext("2d");
+    const canvas = canvasRef.current;
+    const context = canvas.getContext("2d");
     const handleMouseMove = (event) => {
       setPosition({ x: (event.clientX), y: event.clientY });
     };
 
     window.addEventListener("mousemove", handleMouseMove);
-    //  drawGrid(context, position.y, position.x);
+     drawGrid(context, position.y, position.x);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
