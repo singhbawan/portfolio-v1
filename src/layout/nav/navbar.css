@@ -1,0 +1,10 @@
+.link{
+    background-color: pink;
+    color: chartreuse;
+    padding: 10px;
+}
+.active{
+    background-color: violet ;
+    color: aqua;
+    padding: 10px;
+}
