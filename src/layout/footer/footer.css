@@ -1,0 +1,23 @@
+.footer{
+    position: absolute;
+    bottom: 0px;
+}
+
+.innerWrap{
+    width: 60vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.feather {
+  width: 30px;
+  height: 30px;
+  stroke: var(--clr-light);
+  fill: none;
+}
+
+.feather:hover {
+  stroke: var(--clr-accent);
+  cursor: pointer;
+  transform: translateY(-3px);
+}

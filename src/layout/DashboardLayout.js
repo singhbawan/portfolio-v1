@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 import Navbar from './nav/Navbar';
 import './layout.css'
 import Canvas from '../components/Canvas';
-
+import Footer from './footer/Footer';
 function DashboardLayout(){
 
     return (
@@ -10,7 +10,7 @@ function DashboardLayout(){
             <Canvas />
             <Navbar />
             <Outlet />
-            <h1>Footer heading 2</h1>
+            <Footer />
         </div>
       );
 }
