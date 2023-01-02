@@ -7,7 +7,7 @@ function About() {
             Hi,<br></br>
             I'm{" "}
             <span>
-              <img src="./LOGO-4.png" alt="B"></img>
+              <img src="./images/LOGO-4.png" alt="B"></img>
               awandeep Singh,
             </span>
             <br></br>
