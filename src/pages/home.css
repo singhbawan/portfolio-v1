@@ -2,15 +2,27 @@
   position: relative;
   height: 80vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
+.mr-10{
+    margin-right: 10px;
+}
 
+.ml-10{
+    margin-left: 10px;
+}
 
 .home_text {
   font-size: calc(1rem + 2vw);
+  letter-spacing: 2px;
   font-family: "Yeseva One", sans-serif;
+}
+
+.home_subtext{
+  font-size: calc(1rem + 0.7vw);
+    font-family: 'Gabriela','Courier New', Courier, monospace;
 }
 
 .home_img_Container {
