@@ -19,5 +19,6 @@
 .feather:hover {
   stroke: var(--clr-accent);
   cursor: pointer;
-  transform: translateY(-3px);
+  transform: translateY(-12px) scale(1.2);
+  
 }

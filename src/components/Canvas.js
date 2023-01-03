@@ -30,7 +30,7 @@ function Canvas() {
   }
 
   function drawHexagon(ctx, x, y) {
-    ctx.fillStyle = "rgba(20, 60, 99, 0.1)";
+    ctx.fillStyle = "rgba(20, 60, 99, 0.4)";
     ctx.beginPath();
     for (let i = 0; i < 6; i++) {
       ctx.lineTo(x + r * Math.cos(a * i), y + r * Math.sin(a * i));
