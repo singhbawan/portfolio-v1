@@ -9,12 +9,9 @@ function Home() {
         <h1 className="home_text">BAWANDEEP SINGH</h1>
         <p className="home_subtext">CREATIVE REACT DEVELOPER</p>
         <p className="home_subtext">BASED IN TORONTO</p>
-
-        <div>
           <a href={myResume} download="Bawandeep Resume">
             <button className="btn">Download Resume</button>
           </a>
-        </div>
       </div>
 
       <div className="ml-10">
