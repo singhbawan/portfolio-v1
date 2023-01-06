@@ -1,22 +1,36 @@
 .work_wrapper {
   height: 80vh;
-  overflow: scroll;
-}
-
-
-
-.laptop_container {
-  position: relative;
-  margin-bottom: 50px;
-  background-color: burlywood;
-width: fit-content;
-
- 
+  overflow: auto;
   
 }
 
+.project_wrapper{
+  /* background-color: coral; */
+  display: flex;
+  margin-bottom: 50px;
+  
+  flex-wrap: wrap;
+}
+
+.project_wrapper:nth-child(even){
+  /* background-color: red; */
+  flex-direction: row-reverse;
+}
+
+.laptop_container {
+  position: relative;
+  /* background-color: burlywood; */
+  width: fit-content;
+}
+
+.work_data_container{
+  /* background-color: rgb(95, 158, 160); */
+  color: var(--clr-light);
+  /* width: 60vw; */
+}
+
 .asome {
-  background-color: rgba(210, 72, 30, 0.364);
+  /* background-color: rgba(210, 72, 30, 0.364); */
   position: relative;
   width: 40vw;
   z-index: 5;
@@ -29,4 +43,21 @@ width: fit-content;
   top: calc(1px + 1vw);
   left: calc(1px + 5vw);
   z-index: 1;
+}
+
+.work_wrapper::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 15px rgba(68, 68, 68, 0.377);
+  background-color: var(--clr-dark-200);
+
+  border-radius: 100px;
+}
+
+.work_wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.work_wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--clr-accent-800);
+  border-radius: 100px;
+ 
 }

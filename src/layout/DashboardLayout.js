@@ -6,7 +6,7 @@ import Footer from './footer/Footer';
 function DashboardLayout(){
 
     return (
-        <div >
+        <div>
             <Canvas />
             <Navbar />
             <Outlet />

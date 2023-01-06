@@ -21,9 +21,12 @@
   --clr-light: #e4e4e4;
   --clr-darkerdark: #020008;
   --clr-dark: #1d1d1d;
+  --clr-dark-200: #1b1b1b;
   --clr-dark-100: #1d1d1d88;
   --clr-lightdark: #6c706f;
   --clr-accent: #00d6d6;
+  --clr-accent-800: #006a6a83;
+
 
   --fs-h1: 2.75rem;
   --fs-h2: 2.125rem;
