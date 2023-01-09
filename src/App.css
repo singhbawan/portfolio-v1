@@ -20,12 +20,14 @@
 
   --clr-light: #e4e4e4;
   --clr-darkerdark: #020008;
+  --clr-darkerdark-100: #02000866;
+
   --clr-dark: #1d1d1d;
   --clr-dark-200: #1b1b1b;
   --clr-dark-100: #1d1d1d88;
   --clr-lightdark: #6c706f;
   --clr-accent: #00d6d6;
-  --clr-accent-800: #006a6a83;
+  --clr-accent-800: #00d6d694;
 
 
   --fs-h1: 2.75rem;
@@ -50,6 +52,11 @@ canvas {
   z-index: -10;
 }
 
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .btn {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -63,6 +70,7 @@ canvas {
   border-radius: 0.75rem;
   outline: 1px solid;
   opacity: 1;
+  width: max-content;
 }
 
 .btn:hover {

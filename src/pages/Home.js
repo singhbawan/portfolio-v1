@@ -7,7 +7,7 @@ function Home() {
       <div className="mr-10">
         <p className="home_subtext">Hello, I’m</p>
         <h1 className="home_text">BAWANDEEP SINGH</h1>
-        <p className="home_subtext">CREATIVE REACT DEVELOPER</p>
+        <p className="home_subtext">CREATIVE FULL STACK DEVELOPER</p>
         <p className="home_subtext">BASED IN TORONTO</p>
           <a href={myResume} download="Bawandeep Resume">
             <button className="btn">Download Resume</button>

@@ -1,32 +1,72 @@
 .work_wrapper {
   height: 80vh;
   overflow: auto;
-  
 }
-
-.project_wrapper{
-  /* background-color: coral; */
+.work_heading_container {
+  height: 20vh;
   display: flex;
-  margin-bottom: 50px;
-  
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
-.project_wrapper:nth-child(even){
-  /* background-color: red; */
+.work_heading {
+  font-family: "Gabriela", Cambria, Cochin, Georgia, Times, "Times New Roman",
+    serif;
+  font-size: var(--fs-h1);
+  letter-spacing: 3px;
+  background-image: linear-gradient(180deg, #ffffff, #0a6161);
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  cursor: default;
+}
+
+.work_heading::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: -5px;
+  content: "";
+  display: block;
+  height: 4px;
+  width: 0px;
+  border-radius: 50%;
+  left: 50%;
+  position: absolute;
+  background: linear-gradient(180deg, #e4e4e4, #053838);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.work_heading:hover:after {
+  width: 100%;
+  left: 0%;
+}
+.project_wrapper {
+  background-color: var(--clr-darkerdark);
+  display: flex;
+  height: 60vh;
+  align-items: center;
+  margin: 0 30px 60px 30px;
+  flex-wrap: wrap;
+  box-shadow: -5px -5px 13px var(--clr-accent-800);
+}
+
+.project_wrapper:nth-child(even) {
   flex-direction: row-reverse;
+  box-shadow: 5px -5px 13px 2px var(--clr-accent-800);
 }
 
 .laptop_container {
   position: relative;
   /* background-color: burlywood; */
-  width: fit-content;
+
+  margin-left: 2vw;
+  margin-right: 2vw;
 }
 
-.work_data_container{
+.work_data_container {
   /* background-color: rgb(95, 158, 160); */
   color: var(--clr-light);
-  /* width: 60vw; */
+  margin-left: 2vw;
+  margin-right: 2vw;
 }
 
 .asome {
@@ -36,14 +76,14 @@
   z-index: 5;
 }
 
-.asome1 {
+/* .asome1 {
   position: absolute;
   border-radius: 10px;
   width: 30vw;
   top: calc(1px + 1vw);
   left: calc(1px + 5vw);
   z-index: 1;
-}
+} */
 
 .work_wrapper::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 15px rgba(68, 68, 68, 0.377);
@@ -59,5 +99,4 @@
 .work_wrapper::-webkit-scrollbar-thumb {
   background-color: var(--clr-accent-800);
   border-radius: 100px;
- 
 }
