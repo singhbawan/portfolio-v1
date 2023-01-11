@@ -1,87 +1,78 @@
 import "./work.css";
+import Logo from "../components/icons";
+
+let projectData = [
+  {
+    name: "StarShip",
+    description: "An app to visualize the market data",
+    img: "starship.png",
+    tech: ["react", "css", "mui", "javascript", "mui"],
+    github: "https://github.com/FOR-TIMI/Starship",
+    live: "https://still-cliffs-68409.herokuapp.com",
+  },
+  {
+    name: "Join Us",
+    description: "Lorem",
+    img: "Join_Us.png",
+    tech: ["react", "css", "mui", "javascript", "mui"],
+    github: "https://github.com/FOR-TIMI/Starship",
+    live: "https://still-cliffs-68409.herokuapp.com",
+  },
+  {
+    name: "Pods and Parks",
+    description: "Podcast",
+    img: "podsandparks.png",
+    tech: ["react", "css", "mui", "javascript", "mui"],
+    github: "https://github.com/FOR-TIMI/Starship",
+    live: "https://still-cliffs-68409.herokuapp.com",
+  },
+  {
+    name: "Reactor",
+    description: "An app to visualize the market data",
+    img: "reactor.png",
+    tech: ["react", "css", "mui", "javascript", "mui"],
+    github: "https://github.com/FOR-TIMI/Starship",
+    live: "https://still-cliffs-68409.herokuapp.com",
+  },
+];
 
 function Work() {
   return (
     <div className="work_wrapper">
       <div className="work_heading_container">
-      <h1 className="work_heading">Portfolio</h1>
+        <h1 className="work_heading">Portfolio</h1>
       </div>
       <ul>
-        <li className="project_wrapper">
-          <div className="laptop_container">
-          <img className="asome" src="./images/My_work/starship.png" alt="" />
-          </div>
-          <div className="work_data_container">
-            <h2>Starship</h2>
-            <p>An app to visualize the market data </p>
-            <ul>
-              <li>techs</li>
-              <li>nosql</li>
-              <li>mui</li>
-            </ul>
-            <div className="flex">
-            <div className="btn">Github</div>
-            <div className="btn">Live</div>
-            </div>
-          </div>
-        </li>
-        <li className="project_wrapper">
-          <div className="laptop_container">
-            <img className="asome" src="./images/My_work/Join_Us.png" alt="" />
-          </div>
-          <div className="work_data_container">
-            <h2>project name</h2>
-            <p>description</p>
-            <ol>
-              <li>techs</li>
-              <li>nosql</li>
-              <li>mui</li>
-            </ol>
-          </div>
-        </li>
-        <li className="project_wrapper">
-          <div className="laptop_container">
-            <img className="asome" src="./images/My_work/podsandparks.png" alt="" />
-           
-          </div>
-          <div className="work_data_container">
-            <h2>project name</h2>
-            <p>description</p>
-            <ol>
-              <li>techs</li>
-              <li>nosql</li>
-              <li>mui</li>
-            </ol>
-          </div>
-        </li>
-        <li className="project_wrapper">
-          <div className="laptop_container">
-            <img className="asome" src="./images/My_work/reactor.png" alt="" />
-          </div>
-          <div className="work_data_container">
-            <h2>project name</h2>
-            <p>description</p>
-            <ol>
-              <li>techs</li>
-              <li>nosql</li>
-              <li>mui</li>
-            </ol>
-          </div>
-        </li>
-        <li className="project_wrapper">
-          <div className="laptop_container">
-            <img className="asome" src="./images/My_work/portfolio.png" alt="" />
-          </div>
-          <div className="work_data_container">
-            <h2>project name</h2>
-            <p>description</p>
-            <ol>
-              <li>techs</li>
-              <li>nosql</li>
-              <li>mui</li>
-            </ol>
-          </div>
-        </li>
+        {projectData.map((project) => {
+          return (
+            <li className="project_wrapper" key={project.name}>
+              <div className="laptop_container">
+                <img
+                  className="asome"
+                  src={`./images/My_work/${project.img}`}
+                  alt={`screenshot of ${project.name}`}
+                />
+              </div>
+              <div className="work_data_container">
+                <h2 className="work_heading-h2">{project.name}</h2>
+                <p className="work_p">{project.description} </p>
+
+                {project.tech.map((icon) => {
+                  return <Logo variant={icon} />;
+                })}
+
+                <div className="flex">
+                  <a href={project.github} target="_blank">
+                    <div className="btn">Github</div>
+                  </a>
+                  <a href={project.live} target="_blank">
+                    <div className="btn">Live</div>
+                  </a>
+                </div>
+              </div>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

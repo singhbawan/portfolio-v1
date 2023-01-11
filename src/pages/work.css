@@ -10,9 +10,8 @@
 }
 
 .work_heading {
-  font-family: "Gabriela", Cambria, Cochin, Georgia, Times, "Times New Roman",
-    serif;
-  font-size: var(--fs-h1);
+  font-family: var(--ff-primary);
+  font-size: var(--fs-title);
   letter-spacing: 3px;
   background-image: linear-gradient(180deg, #ffffff, #0a6161);
   background-clip: text;
@@ -39,6 +38,23 @@
   width: 100%;
   left: 0%;
 }
+
+.work_heading-h2 {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-h2);
+  letter-spacing: 2px;
+  text-align: center;
+  text-decoration: underline 3px var(--clr-lightdark); 
+  cursor: default;
+}
+
+.work_p{
+  /* font-family: var(--ff-secondary); */
+  font-size: var(--fs-body);
+}
+
+
+
 .project_wrapper {
   background-color: var(--clr-darkerdark);
   display: flex;
