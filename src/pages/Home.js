@@ -1,5 +1,5 @@
 import "./home.css";
-import myResume from "../assets/myResume.pdf";
+import BawandeepResume from "../assets/myResume.pdf";
 
 function Home() {
   return (
@@ -9,7 +9,7 @@ function Home() {
         <h1 className="home_text"><img className="home_text_B" src="/LOGO-4.png" alt="B"></img>AWANDEEP SINGH</h1>
         <p className="home_subtext">CREATIVE FULL STACK DEVELOPER</p>
         <p className="home_subtext">BASED IN TORONTO</p>
-          <a href={myResume} download="Bawandeep Resume">
+          <a href={BawandeepResume} download="Bawandeep Resume">
             <button className="btn">Download Resume</button>
           </a>
       </div>
