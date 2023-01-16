@@ -56,3 +56,7 @@
 .home_img_Container:hover .home_img_person {
   transform: translateY(-15px) translateX(-4px);
 }
+
+.home_text_B{
+  width: calc(1.25rem + 2vw);
+}
