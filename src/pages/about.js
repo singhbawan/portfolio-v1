@@ -8,7 +8,7 @@ function About() {
           <div className="about_text">
             <p>
               Hello! My name is Bawandeep Singh, Full-stack web developer with
-              past experience of Machine Builder for 3+ years, having
+              past experience of Machine Building for 3+ years, having
               successfully delivered two machines to happy customers.
             </p>
             <br></br>
