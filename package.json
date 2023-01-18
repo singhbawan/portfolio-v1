@@ -1,6 +1,6 @@
 {
-  "name": "potfolio-v1",
-  "homepage": "https://gitname.github.io/",
+  "name": "portfolio-v1",
+  "homepage": "https://gitname.github.io/portfolio-v1",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
