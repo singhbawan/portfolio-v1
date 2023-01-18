@@ -86,6 +86,10 @@ canvas {
   text-align: center;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
+
 .btn {
   text-transform: uppercase;
   letter-spacing: 2px;

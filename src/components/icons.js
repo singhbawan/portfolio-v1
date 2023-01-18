@@ -23,6 +23,7 @@ function Logo({ variant, height = 25 }) {
     sequelize: { text: "Sequelize", logo: "sequelize", logoColor: "52B0E7" },
     netlify: { text: "Netlify", logo: "netlify", logoColor: "00C7B7" },
     stripe: { text: "Stripe", logo: "stripe", logoColor: "008CDD" },
+    jquery: { text: "jQuery", logo: "jquery", logoColor: "0769AD" },
     handlebars: {
       text: "Handlebars.js",
       logo: "handlebars.js",

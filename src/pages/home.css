@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background: var(--clr-dark-100); */
 }
 
 
