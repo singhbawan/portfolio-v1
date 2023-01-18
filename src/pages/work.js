@@ -25,14 +25,14 @@ function Work() {
                 <img
                  
                   height={75}
-                  src="./images/arrow_down.svg"
+                  src="/portfolio-v1/images/arrow_down.svg"
                 ></img>
               </label>
               
               <div className="laptop_container">
                 <img
                   className="work_project_img"
-                  src={`./images/My_work/${project.img}`}
+                  src={`/portfolio-v1/images/My_work/${project.img}`}
                   alt={`screenshot of ${project.name}`}
                 />
               </div>

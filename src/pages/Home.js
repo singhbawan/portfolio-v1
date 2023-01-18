@@ -6,7 +6,7 @@ function Home() {
     <div className="home__wrapper">
       <div className="mr-10">
         <p className="home_subtext">Hello, I’m</p>
-        <h1 className="home_text"><img className="home_text_B" src="%PUBLIC_URL%/LOGO-4.png" alt="B"></img>AWANDEEP SINGH</h1>
+        <h1 className="home_text"><img className="home_text_B" src="/portfolio-v1/LOGO-4.png" alt="B"></img>AWANDEEP SINGH</h1>
         <p className="home_subtext">CREATIVE FULL STACK DEVELOPER</p>
         <p className="home_subtext">BASED IN TORONTO</p>
           <a href={BawandeepResume} download="Bawandeep Resume">
@@ -18,12 +18,12 @@ function Home() {
         <div className="home_img_Container">
           <img
             className="home_img_circle"
-            src="%PUBLIC_URL%/images/flower_back.jpg"
+            src="/portfolio-v1/images/flower_back.jpg"
             alt=""
           />
           <img
             className="home_img_person"
-            src="%PUBLIC_URL%/images/Bawandeep_Singh.PNG"
+            src="/portfolio-v1/images/Bawandeep_Singh.PNG"
             alt="Bawandeep Smiling"
           />
         </div>

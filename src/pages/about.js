@@ -31,7 +31,7 @@ function About() {
         </div>
         <img
           className="about_img"
-          src="./images/Profile_pic-full1.jpg"
+          src="/portfolio-v1/images/Profile_pic-full1.jpg"
           alt="Bawandeep's picture"
         ></img>
       </section>
