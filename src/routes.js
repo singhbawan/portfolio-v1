@@ -11,7 +11,7 @@ import DashboardLayout from "./layout/DashboardLayout";
 export default function Router() {
   const routes = useRoutes([
     {
-      path: "/",
+      path: "%PUBLIC_URL%/",
       element: <DashboardLayout />,
       children: [
         { index: true, element: <Home /> }, // render by default beacause of index: true
