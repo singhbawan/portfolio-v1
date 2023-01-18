@@ -26,7 +26,7 @@ Please email me with questions!
 * singhbawan48@gmail.com
 
 ## Screenshot
-<img src = './Screenshot.JPG' alt = 'image' width = '800' height = '400' style = 'border:3px solid black'>
+<img src = './Screenshot.jpg' alt = 'image' width = '800' height = '400' style = 'border:3px solid black'>
 
 ## Deployed Site
 https://singhbawan.github.io/portfolio-v1/
