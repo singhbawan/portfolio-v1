@@ -8,7 +8,7 @@ function Navbar() {
     {/* <img src="./images/LOGO-4.png" alt="logo"></img> */}
     <nav className="wrapper">
       <NavLink
-        to="/"
+        to="/portfolio-v1/"
         className={({ isActive }) => {
           return isActive ? "active" : "link";
         }}
@@ -16,7 +16,7 @@ function Navbar() {
         Home
       </NavLink>
       <NavLink
-        to="/about"
+        to="/portfolio-v1/about"
         className={({ isActive }) => {
           return isActive ? "active" : "link";
         }}
@@ -24,7 +24,7 @@ function Navbar() {
         About
       </NavLink>
       <NavLink
-        to="/work"
+        to="/portfolio-v1/work"
         className={({ isActive }) => {
           return isActive ? "active" : "link";
         }}
@@ -32,7 +32,7 @@ function Navbar() {
         Work
       </NavLink>
       <NavLink
-        to="/skills"
+        to="/portfolio-v1/skills"
         className={({ isActive }) => {
           return isActive ? "active" : "link";
         }}
@@ -40,7 +40,7 @@ function Navbar() {
         Skills
       </NavLink>
       <NavLink
-        to="/contact"
+        to="/portfolio-v1/contact"
         className={({ isActive }) => {
           return isActive ? "active" : "link";
         }}
