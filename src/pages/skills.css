@@ -19,7 +19,7 @@
     border-radius: 100px;
   }
 
-.skills_heading {
+/* .skills_heading {
   height: 20vh;
   display: flex;
   align-items: center;
@@ -31,7 +31,7 @@
   background-clip: text;
   color: transparent;
   position: relative;
-}
+} */
 .skills_subheading {
   text-align: center;
   font-family: var(--ff-primary);

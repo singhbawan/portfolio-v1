@@ -111,6 +111,41 @@ canvas {
   animation: flickerB 0.75s linear 0s reverse 1;
 }
 
+.title_heading_container {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title_heading {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-title);
+  letter-spacing: 3px;
+  background-image: linear-gradient(180deg, #ffffff, #0a6161);
+  background-clip: text;
+  color: transparent;
+  position: relative;
+}
+
+.title_heading::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: -5px;
+  content: "";
+  display: block;
+  height: 4px;
+  width: 0px;
+  border-radius: 50%;
+  left: 50%;
+  position: absolute;
+  background: linear-gradient(180deg, #e4e4e4, #053838);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+.title_heading:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
 @keyframes flickerB {
   0% {
     box-shadow: inset 0px 0px 15px rgba(0, 214, 214, 0.55);

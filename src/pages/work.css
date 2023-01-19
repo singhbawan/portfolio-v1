@@ -18,7 +18,7 @@
   border-radius: 100px;
 }
 
-.work_heading_container {
+/* .work_heading_container {
   height: 20vh;
   display: flex;
   align-items: center;
@@ -52,7 +52,7 @@
 .work_heading:hover:after {
   width: 100%;
   left: 0%;
-}
+} */
 
 .project_wrapper {
   background-color: var(--clr-darkerdark);

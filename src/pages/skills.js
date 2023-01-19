@@ -5,9 +5,9 @@ import skillList from "../utils/skillsList";
 function Skills() {
   return (
     <div className="skills_wrapper">
-      
-      <h1 className="skills_heading">Skills</h1>
-     
+     <div className="title_heading_container"> 
+      <h1 className="title_heading">Skills</h1>
+      </div>
       <div className="skills_container">
         <section className="skills_items">
           <h1 className="skills_subheading">Frontend</h1>

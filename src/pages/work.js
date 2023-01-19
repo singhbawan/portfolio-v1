@@ -7,8 +7,8 @@ import projectData from "../utils/projectData";
 function Work() {
   return (
     <div className="work_wrapper">
-      <div className="work_heading_container">
-        <h1 className="work_heading">Portfolio</h1>
+      <div className="title_heading_container">
+        <h1 className="title_heading">Portfolio</h1>
       </div>
       <ul>
         {projectData.map((project) => {
