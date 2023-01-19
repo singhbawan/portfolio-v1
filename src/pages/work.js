@@ -21,7 +21,7 @@ function Work() {
                 id={project.name}
                 value="value"          
               ></input>
-              <label className="work_label-arrow cursor-pointer" for={project.name}>               
+              <label className="work_label-arrow cursor-pointer" htmlFor={project.name}>               
                 <img
                  
                   height={75}
@@ -44,7 +44,7 @@ function Work() {
                 </p>
                 <div className="flex mb-1 ">
                   {project.tech.map((icon) => {
-                    return <Logo variant={icon} height={25} />;
+                    return <Logo key={icon} variant={icon} height={25} />;
                   })}
                 </div>
                 <div className="flex mb-1 work_project_links">
@@ -61,7 +61,7 @@ function Work() {
                   ) : null}
                 </div>
               </div>
-              <label className="work_label-heading cursor-pointer" for={project.name}> 
+              <label className="work_label-heading cursor-pointer" htmlFor={project.name}> 
               <p className="work_project_heading ">{project.name}</p>
               </label>
             </li>

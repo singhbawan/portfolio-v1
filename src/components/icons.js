@@ -36,7 +36,7 @@ function Logo({ variant, height = 25 }) {
 
   let url = `https://img.shields.io/badge/${logoData[variant].text}-393939?logo=${logoData[variant].logo}&logoColor=${logoData[variant].logoColor}&style=plastic&logoWidth=20`;
 
-  return <img key={variant} className="mr-5 mt-10 icons_img " height={height} src={url} />;
+  return <img className="mr-5 mt-10 icons_img " height={height} src={url} />;
 }
 
 export default Logo;
