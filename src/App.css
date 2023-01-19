@@ -11,7 +11,9 @@
 
 a, u {
   text-decoration: none;
+  color: var(--clr-light);
 }
+
 
 :root {
   --ff-primary: "Gabriela",Cambria, Cochin, Georgia, monospace;
