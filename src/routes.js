@@ -23,7 +23,7 @@ export default function Router() {
       ],
     },
     {
-      path: "*",
+      path: "/portfolio-v1/*",
       element: <Navigate to="/404" replace />,
     },
   ]);
