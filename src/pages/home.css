@@ -61,3 +61,24 @@
 .home_text_B{
   width: calc(1.25rem + 2vw);
 }
+
+
+@media (max-width: 500px) {
+ 
+  .home__wrapper {
+  flex-direction: column-reverse;
+  justify-content: start;
+  }
+  .home_img_Container {
+   margin-bottom: 25px;
+   margin-top: 50px;
+   width: 50vw;
+  }
+  .home_img_circle{
+    width: 50vw;
+  }
+  .home_img_person{
+    width: 55vw;
+  }
+  
+}
