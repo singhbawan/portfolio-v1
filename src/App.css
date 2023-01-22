@@ -45,7 +45,9 @@ a, u {
 
   --test: red 2px solid;
 }
-
+html{
+  overflow: hidden;
+}
 body {
   min-height: 100vh;
   background-color: var(--clr-dark);
