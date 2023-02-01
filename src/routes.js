@@ -22,9 +22,17 @@ export default function Router() {
         { path: "404", element: <Page404 /> },
       ],
     },
-  {
+    {
       path: "/",
       element: <DashboardLayout />,
+      children: [
+        { index: true, element: <Home /> }, // render by default beacause of index: true
+        { path: "about", element: <About /> },
+        { path: "contact", element: <Contact /> },
+        { path: "work", element: <Work />, children:[{}]},
+        { path: "skills", element: <Skills /> },
+        { path: "404", element: <Page404 /> },
+      ],
     },
     {
       path: "*",
