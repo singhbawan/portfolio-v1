@@ -10,7 +10,7 @@ function Canvas() {
   const r = 25;
 
   function drawGrid(ctx, px, py) {
-    setRefPos((position.x+position.y));
+    setRefPos(position.x + position.y);
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     let width = 2000;
 
@@ -38,43 +38,46 @@ function Canvas() {
     ctx.closePath();
     ctx.strokeStyle = "#1d1d1d";
     ctx.stroke();
-    if(Math.random()<=0.02)ctx.fill();
+    if (Math.random() <= 0.02) ctx.fill();
   }
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
     const spotlight = document.getElementById("spotlight1");
-    spotlight.style.left = (position.x-270) + "px";
-    spotlight.style.top = (position.y-270) + "px";
-    if(Math.abs(refPos-(position.x+position.y))>300){
-    drawGrid(context, position.y, position.x);}
+    const key = { left: `${position.x - 270}px`, top: `${position.y - 270}px` };
+    spotlight.animate(key, {
+      duration: 1000,
+      fill: "forwards",
+      easing: "ease-in",
+    });
+    if (Math.abs(refPos - (position.x + position.y)) > 300) {
+      drawGrid(context, position.y, position.x);
+    }
   }, [position]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
     const handleMouseMove = (event) => {
-      setPosition({ x: (event.clientX), y: event.clientY });
+      setPosition({ x: event.clientX, y: event.clientY });
     };
 
     window.addEventListener("mousemove", handleMouseMove);
-     drawGrid(context, position.y, position.x);
+    drawGrid(context, position.y, position.x);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
-  return (<>
-    <div className="spotlight" id='spotlight1'>
-        <div  className="spotlightchild"></div>
-    </div>
-    <canvas
-      ref={canvasRef}
-      width={2000}
-      height={2000}
-    /></>
+  return (
+    <>
+      <div className="spotlight" id="spotlight1">
+        <div className="spotlightchild"></div>
+      </div>
+      <canvas ref={canvasRef} width={2000} height={2000} />
+    </>
   );
 }
 
