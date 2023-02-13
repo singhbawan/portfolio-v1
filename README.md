@@ -29,4 +29,4 @@ Please email me with questions!
 <img src = './Screenshot.jpg' alt = 'image' width = '800' height = '400' style = 'border:3px solid black'>
 
 ## Deployed Site
-https://singhbawan.github.io/portfolio-v1/
+https://www.singhbawan.codes/
